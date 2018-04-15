@@ -1,0 +1,21 @@
+{
+  "name": "@magic/sessions",
+  "version": "0.0.1",
+  "description": "Session handler microservice",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "VERBOSE=true nyc -a node ./test",
+    "format": "format --write",
+    "format:check": "format --list-different"
+  },
+  "author": "Jascha Ehrenreich <jascha@jaeh.at>",
+  "license": "APGL-3.0",
+  "dependencies": {
+    "@magic/rpc": "github:magic/rpc"
+  },
+  "devDependencies": {
+    "@magic/lint": "github:magic/lint",
+    "@magic/test": "github:magic/test"
+  }
+}

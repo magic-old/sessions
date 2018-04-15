@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package session;
+
+// The Session handler service definition.
+service Handler {
+  // Gets a session token for a user key
+  rpc Get (GetReq) returns (GetRes) {}
+  rpc Set (SetReq) returns (SetRes) {}
+}
+
+// The request message containing the user's name.
+message GetReq {
+  string key = 1;
+  string auth = 2;
+}
+
+// The response message containing the greetings
+message GetRes {
+  string token = 1;
+}
+
+message SetReq {
+  string key = 1;
+  string auth = 2;
+}
+
+message SetRes {
+  string token = 1;
+}
